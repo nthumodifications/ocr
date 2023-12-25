@@ -15,7 +15,7 @@ export const GET = async ({ url }) => {
     await worker.terminate();
 
     return new json({
-      result: result.data.text
+      result: result.data.text.replace('\n', '')
     });
   }
 
